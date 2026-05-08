@@ -1,0 +1,43 @@
+:root {
+    --bg-aura: #050505;
+    --card-aura: #0a0a0a;
+    --border-aura: #1a1a1a;
+    --accent-aura: #ffffff;
+}
+
+body {
+    background-color: var(--bg-aura);
+    color: var(--accent-aura);
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.stat-card {
+    background: var(--card-aura);
+    border: 1px solid var(--border-aura);
+    border-radius: 12px;
+    padding: 30px;
+    transition: border 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: #333;
+}
+
+.token-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-aura);
+}
+
+.crypto-value {
+    font-variant-numeric: tabular-nums;
+}
