@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aura | Asset Portfolio</title>
+    <link rel="stylesheet" href="theme.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="flex justify-between items-end mb-16">
+            <div>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Portfolio Overview</p>
+                <h1 id="eth-total" class="text-5xl font-light">0.0000 ETH</h1>
+            </div>
+            <div class="text-right">
+                <button id="sync-btn" class="bg-white text-black px-6 py-2 rounded-full font-medium text-sm hover:opacity-80 transition">Sync Wallet</button>
+                <p id="wallet-display" class="text-[10px] text-gray-600 mt-2 font-mono">NOT CONNECTED</p>
+            </div>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+            <div class="stat-card">
+                <span class="text-xs text-gray-500">24h Change</span>
+                <p class="text-2xl text-green-500 mt-2">+4.2%</p>
+            </div>
+            <div class="stat-card">
+                <span class="text-xs text-gray-500">Total Assets</span>
+                <p class="text-2xl mt-2">12 Tokens</p>
+            </div>
+        </section>
+
+        <div id="log" class="text-[10px] text-gray-700 font-mono h-20 overflow-hidden leading-relaxed">
+            > Initializing Aura engine...<br>
+            > Awaiting system handshake...
+        </div>
+    </div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="../src/dashboard.js"></script>
+</body>
+</html>
